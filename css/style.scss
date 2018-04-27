@@ -1,0 +1,275 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: 'Oswald', sans-serif;
+    vertical-align: baseline;
+    font-weight: 400;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote {
+    &:before,
+    &:after {
+        content: '';
+        content: none;
+    }
+}
+
+q {
+    &:before,
+    &:after {
+        content: '';
+        content: none;
+    }
+}
+
+h1 {
+    font-size: 2.441em;
+}
+
+h2 {
+    font-size: 1.953em;
+}
+
+h3 {
+    font-size: 1.563em;
+}
+
+h4 {
+    font-size: 1.25em;
+}
+
+small {
+    font-size: 0.8em;
+}
+
+strong {
+    font-weight: 600;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+$yellow:#ffd034;
+.container {
+    width: 85%;
+    max-width: 1360px;
+    margin: auto;
+}
+
+.hero {
+    width: 100%;
+    background: url('../img/hero.PNG');
+    background-size: cover;
+    background-position: center;
+    header {
+        .logo {
+            max-width: 25%;
+            padding: 5% 5% 5% 10%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .row {
+        align-items: center
+    }
+    .col {
+        width: 50%;
+        h4 {
+            font-weight: 300;
+            color: #fff;
+            margin: 0.5rem;
+        }
+        .person-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: yellow;
+            margin-right: .5rem;
+        }
+    }
+    main {
+        height: 100vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba( $yellow, .7);
+        ul {
+            display: flex;
+            li {
+                padding: 1.5rem;
+                background: transparent;
+                transition: .2s;
+                text-transform: uppercase;
+                color: #fff;
+                &:hover {
+                    color: #000;
+                    background: $yellow;
+                }
+            }
+        }
+    }
+    .hero-main {
+        .logo {
+            max-width: 50%;
+            margin: 0 auto 1rem;
+            img {
+                width: 100%;
+            }
+        }
+        h1 {
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        h2 {
+            display: inline-flex;
+            background-color: $yellow;
+            padding: 1rem 2rem;
+            margin: 2rem 0 4rem;
+            font-weight: 300;
+        }
+        .more-btn {
+            p {
+                color: #fff;
+            }
+        }
+    }
+}
