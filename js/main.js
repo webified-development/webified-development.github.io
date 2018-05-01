@@ -1,4 +1,7 @@
 $( document ).ready(function() {
+    $(function() {
+        $(".rslides").responsiveSlides();
+      });
    
     $('.hamburger').on('click', function () {
        $(this).toggleClass('open');
