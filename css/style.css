@@ -546,6 +546,7 @@ header h1 {
 }
 
 .rslides {
+  display: none;
   position: relative;
   list-style: none;
   overflow: hidden;
