@@ -223,12 +223,102 @@ a {
   text-align: center;
 }
 
+.hero main .hamburger {
+  position: absolute;
+  z-index: 100;
+  display: none;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 25px;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+.hero main .hamburger span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 50%;
+  background: #fff;
+  opacity: 1;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.hero main .hamburger span:nth-child(even) {
+  left: 50%;
+}
+
+.hero main .hamburger span:nth-child(odd) {
+  left: 0px;
+}
+
+.hero main .hamburger span:nth-child(1), .hero main .hamburger span:nth-child(2) {
+  top: 0px;
+}
+
+.hero main .hamburger span:nth-child(3), .hero main .hamburger span:nth-child(4) {
+  top: 10px;
+}
+
+.hero main .hamburger span:nth-child(5), .hero main .hamburger span:nth-child(6) {
+  top: 20px;
+}
+
+.hero main .hamburger.open span:nth-child(1),
+.hero main .hamburger.open span:nth-child(6) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.hero main .hamburger.open span:nth-child(2),
+.hero main .hamburger.open span:nth-child(5) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.hero main .hamburger.open span:nth-child(1) {
+  left: 3px;
+  top: 7px;
+}
+
+.hero main .hamburger.open span:nth-child(2) {
+  left: calc(50% - 3px);
+  top: 7px;
+}
+
+.hero main .hamburger.open span:nth-child(3) {
+  left: -50%;
+  opacity: 0;
+}
+
+.hero main .hamburger.open span:nth-child(4) {
+  left: 100%;
+  opacity: 0;
+}
+
+.hero main .hamburger.open span:nth-child(5) {
+  left: 3px;
+  top: 21px;
+}
+
+.hero main .hamburger.open span:nth-child(6) {
+  left: calc(50% - 3px);
+  top: 21px;
+}
+
 .hero nav {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(255, 208, 52, 0.7);
+  background: rgba(0, 0, 0, 0.45);
 }
 
 .hero nav ul {
@@ -261,6 +351,7 @@ a {
   color: #fff;
   text-transform: uppercase;
   font-weight: 600;
+  font-size: 3rem;
 }
 
 .hero .hero-main h2 {
@@ -273,5 +364,117 @@ a {
 
 .hero .hero-main .more-btn p {
   color: #fff;
+  font-size: 1.5em;
+}
+
+.hero .hero-main .more-btn .more-arrow {
+  width: 20px;
+  position: relative;
+  bottom: -20px;
+  animation: arrow 3s both infinite;
+}
+
+@media screen and (max-width: 1024px) {
+  .hero header .row .col:first-of-type {
+    width: 40%;
+  }
+  .hero header .row .col {
+    width: 60%;
+  }
+  .hero header .row .col .row .col {
+    width: 50%;
+  }
+  .hero .hero-main h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-contact {
+    display: none;
+  }
+  .hero main {
+    padding: 8rem 0;
+    height: unset;
+  }
+  .hero main .hamburger {
+    display: block;
+  }
+  .hero header {
+    background: #fff;
+  }
+  .hero header .row .col:first-of-type {
+    width: 100%;
+  }
+  .hero header .row .col:first-of-type .logo {
+    height: 5rem;
+    padding: 0;
+    margin: auto;
+    padding: 3%;
+    max-width: unset;
+    text-align: center;
+  }
+  .hero header .row .col:first-of-type .logo img {
+    height: 100%;
+    width: unset;
+  }
+  .hero .hero-main h1 {
+    font-size: 2rem;
+  }
+  .hero .hero-main h2 {
+    font-size: 1.5rem;
+    padding: .7rem 1.2rem;
+    margin: 2rem 0 0 0;
+  }
+  .hero .hero-main .logo {
+    display: none;
+  }
+  .hero .hero-main .more-btn {
+    display: none;
+  }
+  .hero nav {
+    background: rgba(0, 0, 0, 0.65);
+  }
+  .hero nav ul {
+    display: flex;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: .5s;
+  }
+  .hero nav ul.open {
+    max-height: 1000px;
+  }
+  .hero nav ul li:hover {
+    background: transparent;
+    color: #ffd034;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .hero .hero-main h1 {
+    font-size: 1.5rem;
+  }
+  .hero .hero-main h2 {
+    font-size: 1rem;
+  }
+  .hero .hero-main .more-btn p {
+    font-size: .8em;
+  }
+}
+
+@keyframes arrow {
+  0%,
+  20%,
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(-15px);
+  }
+  30% {
+    transform: translateY(-8px);
+  }
 }
 /*# sourceMappingURL=style.css.map */
