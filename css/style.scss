@@ -91,6 +91,7 @@ video {
     font-family: 'Oswald', sans-serif;
     vertical-align: baseline;
     font-weight: 400;
+    box-sizing: border-box;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -185,12 +186,24 @@ $yellow:#ffd034;
     margin: auto;
 }
 
+p {
+    line-height: 20px;
+}
+
+header {
+    margin-bottom: 2rem;
+    h1 {
+        font-weight: 300;
+    }
+}
+
 .hero {
     width: 100%;
     background: url('../img/hero.PNG');
     background-size: cover;
     background-position: center;
     header {
+        margin:0;
         .logo {
             max-width: 25%;
             padding: 5% 5% 5% 10%;
@@ -363,6 +376,96 @@ $yellow:#ffd034;
     }
 }
 
+.whyUs {
+    padding: 4rem 0;
+    .row {
+        align-items: center;
+        .col {
+            width: 50%;
+            &:first-of-type {
+                padding-right: 5%;
+            }
+            img {
+                width: 100%;
+            }
+            p {
+                margin-bottom: .5rem;
+            }
+        }
+    }
+}
+
+.services {
+    position: relative;
+    padding-top: 2rem;
+    .builder {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        max-height: 110%;
+        max-width: 30%;
+    }
+    .container {
+        position: relative;
+        .services-wrapper {
+            width: 70%;
+        }
+        .row {
+            padding: 2rem 0;
+        }
+        .col {
+            width: 50%;
+            display: flex;
+            padding: 1rem;
+            align-items: center;
+            margin-bottom: 2rem;
+            .icon {
+                width: 50px;
+                margin-right: 1rem;
+                height: 50px;
+                border-radius: 50%;
+                background-color: $yellow;
+                flex: 0 0 auto;
+            }
+        }
+        header h1 {
+            margin-bottom: 2rem;
+        }
+    }
+    .yellow-stripe {
+        background-color: $yellow;
+        .builder{
+            display: none;
+        }
+        .mobile-stripe{
+            background-color: $yellow;
+            width: 100%;
+            height: 4rem;
+            display: none;
+            position: relative;
+            box-shadow: 0px -14px 50px 10px rgba(0, 0, 0, 0.2);
+        }
+        .row {
+            padding: 0;
+        }
+        .col {
+            width: 33%;
+            justify-content: center;
+            margin: 0;
+            padding: 1.5rem 0;
+            svg {
+                width: 40px;
+                margin-right: 1rem;
+            }
+            h2 {
+                font-weight: 300;
+                color: #fff;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .hero {
         header .row {
@@ -380,6 +483,17 @@ $yellow:#ffd034;
             h1 {
                 font-size: 2.5rem;
             }
+        }
+    }
+    .whyUs .container {
+        width: 100%;
+    }
+    .services {
+        .container .services-wrapper {
+            width: 100%;
+        }
+        .builder {
+            display: none;
         }
     }
 }
@@ -450,6 +564,54 @@ $yellow:#ffd034;
             }
         }
     }
+    .whyUs .container .row {
+        .col {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            &:first-of-type {
+                display: none;
+            }
+        }
+    }
+    .services {
+        .container {
+            padding-bottom: 2rem;
+            header {
+                text-align: center;
+            }
+            .row .col {
+                width: 100%;
+                margin: auto;
+                justify-content: center;
+                p {
+                    display: none;
+                }
+            }
+        }
+        .yellow-stripe {
+            background: #fff;
+            .mobile-stripe{
+                display: block
+            };
+            .container {
+                padding-bottom: 4rem;
+                .row .col {
+                    justify-content: flex-start;
+                    h2 {
+                        color: $yellow;
+                    }
+                    svg path {
+                        fill: $yellow;
+                    }
+                }
+            }
+            .builder {
+                display: block;
+                max-width: 40%;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 550px) {
@@ -470,15 +632,16 @@ $yellow:#ffd034;
 
 @keyframes arrow {
     0%,
-    20%,
+    8%,
+    18%,
     50%,
     100% {
         transform: translateY(0);
     }
-    10% {
+    5% {
         transform: translateY(-15px);
     }
-    30% {
+    15% {
         transform: translateY(-8px);
     }
 }
