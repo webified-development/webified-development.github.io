@@ -89,7 +89,7 @@ video {
   font-size: 100%;
   font-family: 'Oswald', sans-serif;
   vertical-align: baseline;
-  font-weight: 400;
+  font-weight: 300;
   box-sizing: border-box;
 }
 
@@ -545,6 +545,130 @@ header h1 {
   border: 5px solid #ffd034;
 }
 
+.contact {
+  position: relative;
+  padding: 6rem 0;
+}
+
+.contact .contact-main {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+.contact .contact-main a {
+  margin: 2rem;
+  padding: 1rem 3rem;
+  background-color: #ffd034;
+  display: inline-block;
+}
+
+.contact .wrench {
+  position: absolute;
+  right: 0;
+  top: 0%;
+  height: 100%;
+}
+
+.pre-footer {
+  padding: 4rem 0;
+  background-image: url("../img/wood.jpg");
+}
+
+.pre-footer .col {
+  width: 33%;
+  color: #fff;
+}
+
+.pre-footer .col.credentials {
+  text-transform: uppercase;
+}
+
+.pre-footer .col.credentials p,
+.pre-footer .col.credentials h4 {
+  font-weight: 400;
+}
+
+.pre-footer .col.credentials h1 {
+  margin-bottom: 1rem;
+}
+
+.pre-footer .col.credentials .address {
+  margin-top: .5rem;
+  text-transform: none;
+}
+
+.pre-footer .col.shortcuts h4 {
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+.pre-footer .col.shortcuts a {
+  margin-bottom: .5rem;
+  display: flex;
+  align-items: center;
+}
+
+.pre-footer .col.shortcuts a p {
+  font-weight: 300;
+}
+
+.pre-footer .col.shortcuts a img {
+  width: 1rem;
+  height: 1rem;
+  margin-right: .6rem;
+}
+
+.pre-footer .col.shortcuts .wrapper {
+  width: 100px;
+  margin: auto;
+}
+
+.pre-footer .col.extras .link {
+  display: flex;
+  align-items: center;
+  width: 240px;
+  margin-left: calc(100% - 240px);
+  margin-bottom: 1rem;
+}
+
+.pre-footer .col.extras .link h4 {
+  font-weight: 300;
+}
+
+.pre-footer .col.extras .link .pic {
+  width: 40px;
+  height: 40px;
+  background: #ffd034;
+  margin-right: 1rem;
+}
+
+footer {
+  width: 100%;
+  height: 60px;
+  background: #333;
+  color: #fff;
+}
+
+footer .container {
+  height: 100%;
+}
+
+footer .row {
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+}
+
+footer a {
+  opacity: .6;
+  transition: .3s;
+}
+
+footer a:hover {
+  opacity: 1;
+}
+
 .rslides {
   display: none;
   position: relative;
@@ -576,6 +700,12 @@ header h1 {
   float: left;
   width: 100%;
   border: 0;
+}
+
+@media screen and (max-width: 1366px) {
+  .contact .contact-main {
+    width: 70%;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -711,6 +841,29 @@ header h1 {
   }
   .projects .rslides {
     display: block;
+  }
+  .contact .contact-main {
+    width: 100%;
+  }
+  .pre-footer .col {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .pre-footer .col:last-of-type {
+    margin: 0;
+  }
+  .pre-footer .col.credentials {
+    text-align: center;
+  }
+  .pre-footer .col.shortcuts .wrapper, .pre-footer .col.extras .link {
+    margin: 0;
+  }
+  footer span {
+    display: none;
+  }
+  footer .row {
+    justify-content: space-around;
+    flex-direction: column;
   }
 }
 
