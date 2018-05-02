@@ -730,6 +730,9 @@ footer a:hover {
   .services .builder {
     display: none;
   }
+  .contact .wrench {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -876,6 +879,9 @@ footer a:hover {
   }
   .hero .hero-main .more-btn p {
     font-size: .8em;
+  }
+  footer p {
+    font-size: .9rem;
   }
 }
 

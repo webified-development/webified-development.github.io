@@ -683,6 +683,9 @@ footer {
             display: none;
         }
     }
+    .contact .wrench{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -851,6 +854,9 @@ footer {
                 font-size: .8em;
             }
         }
+    }
+    footer p{
+        font-size: .9rem;
     }
 }
 
